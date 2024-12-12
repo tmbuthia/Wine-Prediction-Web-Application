@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Prediction</title>
+</head>
+<body>
+    <h1>Wine Class Prediction</h1>
+
+    <form action="/predict" method="POST">
+        <label for="alcohol">Alcohol:</label>
+        <select name="alcohol" required>
+            <option value="12.0">Low (12.0)</option>
+            <option value="13.0">Medium (13.0)</option>
+            <option value="14.0">High (14.0)</option>
+        </select><br><br>
+
+        <label for="malic_acid">Malic Acid:</label>
+        <select name="malic_acid" required>
+            <option value="1.0">Low (1.0)</option>
+            <option value="2.0">Medium (2.0)</option>
+            <option value="3.0">High (3.0)</option>
+        </select><br><br>
+
+        <label for="ash">Ash:</label>
+        <select name="ash" required>
+            <option value="2.0">Low (2.0)</option>
+            <option value="2.5">Medium (2.5)</option>
+            <option value="3.0">High (3.0)</option>
+        </select><br><br>
+
+        <label for="alcalinity_of_ash">Alcalinity of Ash:</label>
+        <select name="alcalinity_of_ash" required>
+            <option value="15.0">Low (15.0)</option>
+            <option value="20.0">Medium (20.0)</option>
+            <option value="25.0">High (25.0)</option>
+        </select><br><br>
+
+        <label for="magnesium">Magnesium:</label>
+        <select name="magnesium" required>
+            <option value="80">Low (80)</option>
+            <option value="100">Medium (100)</option>
+            <option value="120">High (120)</option>
+        </select><br><br>
+
+        <label for="total_phenols">Total Phenols:</label>
+        <select name="total_phenols" required>
+            <option value="2.0">Low (2.0)</option>
+            <option value="2.5">Medium (2.5)</option>
+            <option value="3.0">High (3.0)</option>
+        </select><br><br>
+
+        <label for="flavanoids">Flavanoids:</label>
+        <select name="flavanoids" required>
+            <option value="1.0">Low (1.0)</option>
+            <option value="2.0">Medium (2.0)</option>
+            <option value="3.0">High (3.0)</option>
+        </select><br><br>
+
+        <label for="nonflavanoid_phenols">Nonflavanoid Phenols:</label>
+        <select name="nonflavanoid_phenols" required>
+            <option value="0.3">Low (0.3)</option>
+            <option value="0.5">Medium (0.5)</option>
+            <option value="0.7">High (0.7)</option>
+        </select><br><br>
+
+        <label for="proanthocyanins">Proanthocyanins:</label>
+        <select name="proanthocyanins" required>
+            <option value="1.0">Low (1.0)</option>
+            <option value="1.5">Medium (1.5)</option>
+            <option value="2.0">High (2.0)</option>
+        </select><br><br>
+
+        <label for="color_intensity">Color Intensity:</label>
+        <select name="color_intensity" required>
+            <option value="4.0">Low (4.0)</option>
+            <option value="6.0">Medium (6.0)</option>
+            <option value="8.0">High (8.0)</option>
+        </select><br><br>
+
+        <label for="hue">Hue:</label>
+        <select name="hue" required>
+            <option value="0.8">Low (0.8)</option>
+            <option value="1.0">Medium (1.0)</option>
+            <option value="1.2">High (1.2)</option>
+        </select><br><br>
+
+        <label for="od280/od315_of_diluted_wines">OD280/OD315 of Diluted Wines:</label>
+        <select name="od280/od315_of_diluted_wines" required>
+            <option value="2.5">Low (2.5)</option>
+            <option value="3.0">Medium (3.0)</option>
+            <option value="3.5">High (3.5)</option>
+        </select><br><br>
+
+        <label for="proline">Proline:</label>
+        <select name="proline" required>
+            <option value="500">Low (500)</option>
+            <option value="800">Medium (800)</option>
+            <option value="1000">High (1000)</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
